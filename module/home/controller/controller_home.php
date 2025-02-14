@@ -3,13 +3,13 @@ $path = $_SERVER['DOCUMENT_ROOT']."/componentes";
 include($path."/module/home/model/DAOHome.php");
 
 if(! isset($_GET['op'])){
-    include("module/home/view/index.html");
+    include("module/home/view/home.html");
     return;
 }
 
 switch($_GET['op']){
     case 'list':
-        include("module/home/view/index.html");
+        include("module/home/view/home.html");
         break;
 
     case 'home_tipo_producto':

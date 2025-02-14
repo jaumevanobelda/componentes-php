@@ -2,9 +2,11 @@
 <html lang="es">
     <head> 
 <?php
-
-include("view/inc/top_page.php");
-
+if(isset($_GET['page'])){
+    include("view/inc/top_page_". $_GET['page'] .".html");
+}else{
+    include("view/inc/top_page_home.html");
+}
 ?>
 <head>
 <body>

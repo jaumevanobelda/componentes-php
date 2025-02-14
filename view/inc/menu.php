@@ -6,7 +6,7 @@
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
 						<li><a href="index.php?page=home&op=list">Home</a></li>
-						<li><a href="#">Hot Deals</a></li>
+						<li><a href="index.php?page=shop&op=list">Tienda</a></li>
 						<li><a href="#">Categories</a></li>
 						<li><a href="#">Laptops</a></li>
 						<li><a href="#">Smartphones</a></li>
