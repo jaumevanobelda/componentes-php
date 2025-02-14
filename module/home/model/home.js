@@ -6,7 +6,7 @@ function load_tipo_producto(){
         console.log(data);
         for(row in data){
 
-            $('<div></div>').attr('class', "div_tipo_producto").attr({ 'id': data[row].nombre }).appendTo('#tipos_productos')
+            $('<swiper-slide></swiper-slide>').attr('class', "div_tipo_producto").attr({ 'id': data[row].nombre }).appendTo('#tipos_productos')
                 .html(
                     "<div class='col-md-4 col-xs-6'>"+
 						"<div class='shop'>"+
@@ -32,7 +32,7 @@ function load_marcas(){
         console.log(data);
         for(row in data){
 
-            $('<div></div>').attr('class', "div_marca").attr({ 'id': data[row].nombre }).appendTo('#marcas')
+            $('<swiper-slide></swiper-slide>').attr('class', "div_marca").attr({ 'id': data[row].nombre }).appendTo('#marcas')
                 .html(
                     "<div class='col-md-4 col-xs-6'>"+
 						"<div class='shop'>"+
