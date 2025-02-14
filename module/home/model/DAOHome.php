@@ -17,6 +17,19 @@
 			}
 			return $retrArray;
         }
+		function select_marcas(){
+            $sql = "select * from marcas";
+            $conexion = connect::con();
+			$resultado = mysqli_query($conexion,$sql);
+			connect::close($conexion);
+            $retrArray = array();
+			if (mysqli_num_rows($resultado) > 0) {
+				while ($row = mysqli_fetch_assoc($resultado)) {
+					$retrArray[] = $row;
+				}
+			}
+			return $retrArray;
+        }
 
 
 

@@ -24,6 +24,36 @@ function load_tipo_producto(){
 
     })
 }
+
+
+function load_marcas(){
+    ajaxPromise('module/home/controller/controller_home.php?op=home_marca','GET', 'JSON')
+    .then(function(data){
+        console.log(data);
+        for(row in data){
+
+            $('<div></div>').attr('class', "div_marca").attr({ 'id': data[row].nombre }).appendTo('#marcas')
+                .html(
+                    "<div class='col-md-4 col-xs-6'>"+
+						"<div class='shop'>"+
+                            "<div class='shop-img'>"+
+								"<img class='marca_img' src='"+data[row].imagen+"'>"+
+							"</div>"+
+                            "<div class='shop-body'>"+
+                                "<h3>"+ data[row].nombre +"</h3>"+
+                            "</div>"+
+                        "</div>"+
+                    "</div>"
+                )  
+        }
+
+
+    })
+}
+
+
+
 $(document).ready(function(){
     load_tipo_producto();
+    load_marcas();
 });

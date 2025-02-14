@@ -21,7 +21,15 @@ switch($_GET['op']){
         }
         echo json_encode($select_tipo_producto);
         break;
-
+    case 'home_marca':
+        try{
+            $DAOHome = new DAOHome();
+            $select_marca = $DAOHome->select_marcas();
+        }catch(Exception $e){
+            echo json_encode("Error".$e);
+        }
+        echo json_encode($select_marca);
+        break;
 
 
 
