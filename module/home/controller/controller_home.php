@@ -35,7 +35,7 @@ switch($_GET['op']){
 
 
     default;
-    include("view/inc/error404.php");
+    include("view/inc/error404.html");
     break;
 }
 

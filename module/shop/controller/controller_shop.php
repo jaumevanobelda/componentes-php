@@ -48,6 +48,6 @@ switch($_GET['op']){
         break;
 
         default;
-        include("view/inc/error404.php");
+        include("view/inc/error404.html");
         break;
 }

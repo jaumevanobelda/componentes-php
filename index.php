@@ -12,11 +12,11 @@ if(isset($_GET['page'])){
 <body>
     <header>
         <?php
-            include("view/inc/header.php");
+            include("view/inc/header.html");
         ?>
     </header>
         <?php
-            include("view/inc/menu.php");
+            include("view/inc/menu.html");
         ?>
 
     <div id="page">
@@ -26,11 +26,11 @@ if(isset($_GET['page'])){
     </div>
     <footer>
         <?php
-            include("view/inc/footer.php");
+            include("view/inc/footer.html");
         ?>
     </footer>
     <?php
-        include("view/inc/bottom_page.php")
+        include("view/inc/bottom_page.html")
     ?>
 </body>
 

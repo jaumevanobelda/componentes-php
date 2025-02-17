@@ -16,16 +16,12 @@ function load_productos(){
                 "<div class='list_producto_nombre'>"+
                 "<p>"+ data[row].nombre +"</p>"+
                 "</div>"+
-                "<div class='list_producto_tipo'>"+
-                "<p>"+ data[row].tipo +"</p>"+
+                "<div class='list_producto_precio'>"+
+                "<p>"+ data[row].precio +"€ </p>"+
                 "</div>"+
                 "<div class='list_producto_estado'>"+
                 "<p>"+ data[row].estado +"</p>"+
                 "</div>"+
-                "<div class='list_producto_precio'>"+
-                "<p>"+ data[row].precio +"€ </p>"+
-                "</div>"+
-
 
 
                 "</div>"
