@@ -20,14 +20,31 @@ switch($_GET['op']){
         }
         echo json_encode($select_all_productos);
         break;
-    case 'list_producto':
+    case 'select_one_producto':
+        try{
+            $daoshop = new DAOShop();
+            $select_images = $daoshop->select_product_images($_GET['id']);
+        }catch(Exception $e){
+            echo json_encode("Error".$e);
+        }
         try{
             $daoshop = new DAOShop();
             $select_one_producto = $daoshop->select_one_producto($_GET['id']);
         }catch(Exception $e){
             echo json_encode("Error".$e);
         }
-        echo json_encode($select_one_producto);
+        try{
+            $daoshop = new DAOShop();
+            $select_specs = $daoshop->select_product_specs($_GET['id']);
+        }catch(Exception $e){
+            echo json_encode("Error".$e);
+        }
+
+        $resultado = array();
+        $resultado[0] = $select_images;
+        $resultado[1] = $select_one_producto;
+        $resultado[2] = $select_specs;
+        echo json_encode($resultado);
         break;
 
         default;

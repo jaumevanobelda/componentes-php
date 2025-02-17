@@ -24,14 +24,37 @@
 			return $retrArray;
         }
         function select_one_producto($id){
-
             $sql = "SELECT *
             FROM productos
-            where id =" . $id;
+            where id_producto =" . $id;
+            $conexion = connect::con();
+			$resultado = mysqli_query($conexion,$sql)->fetch_object();
+			connect::close($conexion);
+			return $resultado;
+        }
+        function select_product_images($id){
+            $sql = "SELECT imagen
+            FROM imagenes_productos
+            where producto =" . $id;
             $conexion = connect::con();
 			$resultado = mysqli_query($conexion,$sql);
 			connect::close($conexion);
-            $retrArray = array();
+			$retrArray = array();
+			if (mysqli_num_rows($resultado) > 0) {
+				while ($row = mysqli_fetch_assoc($resultado)) {
+					$retrArray[] = $row;
+				}
+			}
+			return $retrArray;
+        }
+        function select_product_specs($id){
+            $sql = "SELECT parametro,valor
+            FROM especificaciones_productos
+            where producto =" . $id;
+            $conexion = connect::con();
+			$resultado = mysqli_query($conexion,$sql);
+			connect::close($conexion);
+			$retrArray = array();
 			if (mysqli_num_rows($resultado) > 0) {
 				while ($row = mysqli_fetch_assoc($resultado)) {
 					$retrArray[] = $row;
