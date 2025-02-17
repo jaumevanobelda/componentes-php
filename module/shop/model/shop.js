@@ -86,7 +86,7 @@ function load_details_producto(id){
             "<p>" + data[1].nombre + "</p>"+
             "</div>"+
             "<div class='details_producto_precio'>"+
-            "<p>" + data[1].precio + "</p>"+
+            "<p>" + data[1].precio + "€</p>"+
             "</div>"+
             "<div class='details_producto_tipo'>"+
             "<p>" + data[1].tipo + "</p>"+
@@ -106,17 +106,16 @@ function load_details_producto(id){
         )
         for(row in data[2]){
             specs = specs + " <div class='details_producto_especificacion'>"+
-            "<div class='details_producto_especificacion_parametro'> <p> " + data[2][row].parametro + "</p> </div>"+ 
+            "<div class='details_producto_especificacion_parametro'> <p> " + data[2][row].parametro + ": </p> </div>"+ 
             "<div class='details_producto_especificacion_valor'> <p> " + data[2][row].valor + "</p> </div>"+ 
             "</div>";
         }
 
 
 
-        $('<div></div>').attr('class', 'details_producto_specs').appendTo('#details_productos')
-        .html(specs)
+        $('<div></div>').attr('class', 'details_producto_specs').appendTo('.details_producto_body')
+        .html( "<h3>Especificaciones</h3>" + specs)
 
-        
     })
 
 

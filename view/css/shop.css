@@ -1,0 +1,19 @@
+  #details_productos{
+    display: flex;
+  }
+
+  .carusel_details_imagenes img{
+    width: 500px;
+  height: 500px;
+  }
+  .carusel_details_imagenes {
+    margin-right: 100px ;
+    width: 500px;
+  height: 500px;
+  }
+  .details_producto_especificacion *{
+    display: inline-flex;
+  }
+  .details_producto_body{
+    text-align: center;
+  }
