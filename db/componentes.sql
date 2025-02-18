@@ -62,6 +62,7 @@ CREATE TABLE tipos_productos (
     id_tipo_producto int NOT NULL,
     nombre varchar(100) NOT NULL,
     imagen varchar(100) NOT NULL,
+    ico varchar(100),
     UNIQUE (nombre)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -170,8 +171,8 @@ Alter Table especificaciones_productos
     ADD CONSTRAINT fk_producto_pri FOREIGN KEY (producto) REFERENCES
     productos(id_producto);
 
-INSERT INTO tipos_productos ( nombre, imagen) VALUES
-('cpu','view/img/tipos/cpu.png'),
+INSERT INTO tipos_productos ( nombre, imagen,ico) VALUES
+('cpu','view/img/tipos/cpu.png','<i class="fa-solid fa-microchip" style="color: #2e6cd6;"></i>'),
 ('gpu','view/img/tipos/gpu.png'),
 ('placa base','view/img/tipos/placa.png'),
 ('ram','view/img/tipos/ram.png'),

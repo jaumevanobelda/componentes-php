@@ -60,31 +60,39 @@ function load_details_producto(id){
         console.log(data);
         console.log(data[1]);
         let imagenes = "";
+        let imagenesbottom = "";
         let specs = "";
         for(row in data[0]){
             console.log(data[0][row].imagen);
             imagenes = imagenes + " <swiper-slide class='details_producto_carusel_imagen'>"+
+            "<img src='" + data[0][row].imagen + "'> </img> </swiper-slide> "
+            imagenesbottom = imagenesbottom + " <swiper-slide class='details_producto_carusel_imagen_bottom'>"+
             "<img src='" + data[0][row].imagen + "'> </img> </swiper-slide> "; 
         }
 
  console.log(imagenes);
         $('<div></div>').attr('class', 'details_producto_img').appendTo('#details_productos')
         .html(
-            "<swiper-container id='details_producto_carusel_imagenes' class='row carusel_details_imagenes' navigation='true' pagination='true' pagination-clickable='true'"+
-            " css-mode='true'  loop='true' >"+
+            "<swiper-container id='details_producto_carusel_imagenes' class=' carusel_details_imagenes' navigation='true' pagination='true' pagination-clickable='true'"+
+            " css-mode='true'  loop='true' thumbs-swiper='.carusel_details_imagenes_bottom' slides-per-view='1' >"+
             imagenes +
+            " </swiper-container>"+
+            "<swiper-container id='details_producto_carusel_imagenes_foot' class=' carusel_details_imagenes_bottom'  slides-per-view='5' free-mode='true'"+
+            "watch-slides-progress='true' >"+
+            imagenesbottom +
             " </swiper-container>"
         )
 
         $('<div></div>').attr('class', 'details_producto_body').appendTo('#details_productos')
         .html(
             "<div class='details_producto_nombre'>"+
-            "<p>" + data[1].nombre + "</p>"+
+            "<h1>" + data[1].nombre + "</h1>"+
             "</div>"+
             "<div class='details_producto_precio'>"+
             "<p>" + data[1].precio + "€</p>"+
             "</div>"+
             "<div class='details_producto_tipo'>"+
+            "<i class='fa-solid fa-microchip'></i>"+
             "<p>" + data[1].tipo + "</p>"+
             "</div>"+
             "<div class='details_producto_marca'>"+
