@@ -7,18 +7,20 @@
         function select_all_productos(){
 
             $sql = "
-            select p.*,i.imagen
+            select p.*,GROUP_CONCAT(i.imagen SEPARATOR ':') AS imagen_array 
             from productos p left join imagenes_productos i on p.id_producto = i.producto
-            group by i.producto
-            having i.producto = min(producto);
+			group by p.id_producto
             ";
             $conexion = connect::con();
 			$resultado = mysqli_query($conexion,$sql);
 			connect::close($conexion);
             $retrArray = array();
+			$i=0;
 			if (mysqli_num_rows($resultado) > 0) {
 				while ($row = mysqli_fetch_assoc($resultado)) {
 					$retrArray[] = $row;
+					$retrArray[$i]["imagen_array"] = explode(":", $row['imagen_array']) ; 
+					$i = $i + 1;
 				}
 			}
 			return $retrArray;

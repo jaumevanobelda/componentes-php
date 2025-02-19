@@ -7,10 +7,20 @@ function load_productos(){
         $('#details_productos').empty();
 
         for(row in data){
+            imagenes = "";
+            for(img in data[row].imagen_array){
+                console.log(data[row].imagen_array[img]);
+                imagenes = imagenes + " <swiper-slide class='list_carusel_imagen'>"+
+                "<img src='" + data[row].imagen_array[img] + "'> </img> </swiper-slide> ";
+            }
             $('<div></div>').attr({'id': data[row].id_producto,'class': 'list_producto'}).appendTo('#body_shop_productos')
             .html(
-                "<div class='div_img'>"+
-                "<img src='"+ data[row].imagen + "'> </img>"+
+                "<div class='div_img'>"+    
+                "<swiper-container class='list_carusel_imagenes'  pagination='true' pagination-clickable='true'"+
+                "  loop='true' slides-per-view='1' autoplay-delay='2500' >"+
+                 imagenes +
+                " </swiper-container>"+
+                
                 "</div>"+
                 "<div class='list_producto_text'>"+
                 "<div class='list_producto_nombre'>"+

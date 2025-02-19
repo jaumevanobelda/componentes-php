@@ -9,6 +9,13 @@
  .list_producto:hover  .list_producto_estado{
   display: initial;
  }
+ .list_producto:hover  {
+  cursor:pointer;
+  scale: 1.2;
+  background-color: white;
+  font-weight: bold;
+  z-index: 5;
+}
 
  .list_producto{
   height: max-content;
@@ -20,11 +27,14 @@
  
   text-align: center;
 }
-#body_shop_productos img{
+.div_img *{
   border-bottom: 1px black solid;
-
   width: 150px;
   height:150px;
+}
+.div_img swiper-button-prev{
+  width: 5%;
+  height: 5%;
 }
   .details_producto_body > div{
     display: inline;
@@ -65,13 +75,13 @@
   .details_producto_body{
     margin-top: 2% !important;
     padding: 2px;
-    border: 1px black solid;
-    border-radius: 20px;
+    /* border: 1px black solid;
+    border-radius: 20px; */
   }
   .details_producto_body p{
     padding: 5px;
     margin-bottom: 5px;
-    font-size: 20px;
+    font-size:2vw;
   }
   .details_producto_carusel_imagen{
     max-width: max-content;

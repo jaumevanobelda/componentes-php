@@ -172,23 +172,23 @@ Alter Table especificaciones_productos
     productos(id_producto);
 
 INSERT INTO tipos_productos ( nombre, imagen,ico) VALUES
-('cpu','view/img/tipos/cpu.png','<i class="fa-solid fa-microchip" style="color: #2e6cd6;"></i>'),
-('gpu','view/img/tipos/gpu.png','<img class="ico" src="view/ico/tipos/gpu.png"> '),
-('placa base','view/img/tipos/placa.png','<img class="ico" src="view/ico/tipos/gpu.png"> '),
-('ram','view/img/tipos/ram.png','<img class="ico" src="view/ico/tipos/gpu.png"> '),
-('torre','view/img/tipos/torre.png','<img class="ico" src="view/ico/tipos/gpu.png"> '),
-('fuente de alimentacion','view/img/tipos/psu.png','<img class="ico" src="view/ico/tipos/gpu.png"> ');
+('Cpu','view/img/tipos/cpu.png','<i class="fa-solid fa-microchip" style="color: #2e6cd6;"></i>'),
+('Gpu','view/img/tipos/gpu.png','<img class="ico" src="view/ico/tipos/gpu.png"> '),
+('Placa base','view/img/tipos/placa.png','<img class="ico" src="view/ico/tipos/gpu.png"> '),
+('Ram','view/img/tipos/ram.png','<img class="ico" src="view/ico/tipos/gpu.png"> '),
+('Torre','view/img/tipos/torre.png','<img class="ico" src="view/ico/tipos/gpu.png"> '),
+('Fuente de alimentacion','view/img/tipos/psu.png','<img class="ico" src="view/ico/tipos/gpu.png"> ');
 
 INSERT INTO marcas ( nombre, imagen) VALUES
-('amd','view/img/marcas/amd.png'),
-('intel','view/img/marcas/intel.png'),
-('nvidia','view/img/marcas/nvidia.png'),
-('msi','view/img/marcas/msi.png'),
-('asus','view/img/marcas/asus.png'),
-('corsair','view/img/marcas/corsair.png'),
-('evga','view/img/marcas/evga.png'),
-('nzxt','view/img/marcas/nzxt.png'),
-('gskill','view/img/marcas/gskill.png');
+('Amd','view/img/marcas/amd.png'),
+('Intel','view/img/marcas/intel.png'),
+('Nvidia','view/img/marcas/nvidia.png'),
+('Msi','view/img/marcas/msi.png'),
+('Asus','view/img/marcas/asus.png'),
+('Corsair','view/img/marcas/corsair.png'),
+('Evga','view/img/marcas/evga.png'),
+('Nzxt','view/img/marcas/nzxt.png'),
+('Gskill','view/img/marcas/gskill.png');
 
 INSERT INTO ciudades ( nombre, imagen) VALUES
 ('valencia','view/img/ciudades/valencia.png'),
@@ -207,19 +207,19 @@ INSERT INTO tipos_ventas ( nombre, imagen) VALUES
 
 
 INSERT INTO productos ( nombre, tipo, marca,descripcion,precio,ciudad,estado) VALUES
-('ryzen 5 5500','cpu','amd','Procesador de medio rendimiento',100,'valencia','nuevo'),
-('Ryzen 7 5800X', 'cpu', 'amd', 'Procesador de alto rendimiento', 250, 'madrid', 'nuevo'),
-('Intel Core i7-12700K', 'cpu', 'intel', 'Procesador de 12ª generación', 320, 'barcelona', 'nuevo'),
-('NVIDIA RTX 3060', 'gpu', 'nvidia', 'Tarjeta gráfica de 12GB', 350, 'valencia', 'casi nuevo'),
-('NVIDIA RTX 3080', 'gpu', 'nvidia', 'Tarjeta gráfica de alto rendimiento', 750, 'madrid', 'bueno'),
-('MSI B450 Tomahawk', 'placa base', 'msi', 'Placa base para Ryzen', 120, 'barcelona', 'nuevo'),
-('ASUS ROG Strix B550-F', 'placa base', 'asus', 'Placa base gaming', 180, 'valencia', 'casi nuevo'),
-('Corsair Vengeance 16GB', 'ram', 'corsair', 'Memoria RAM DDR4 3200MHz', 80, 'madrid', 'nuevo'),
-('G.Skill Trident Z 32GB', 'ram', 'gskill', 'Memoria RAM DDR4 3600MHz', 150, 'barcelona', 'bueno'),
-('NZXT H510', 'torre', 'nzxt', 'Caja ATX con diseño minimalista', 100, 'valencia', 'nuevo'),
-('Corsair 4000D', 'torre', 'corsair', 'Torre con buen flujo de aire', 110, 'madrid', 'casi nuevo'),
-('Corsair RM750x', 'fuente de alimentacion', 'corsair', 'Fuente de 750W 80+ Gold', 130, 'barcelona', 'nuevo'),
-('EVGA 650W 80+ Bronze', 'fuente de alimentacion', 'evga', 'Fuente eficiente y económica', 80, 'valencia', 'bueno');
+('Ryzen 5 5500','cpu','Amd','Procesador de medio rendimiento',100,'valencia','nuevo'),
+('Ryzen 7 5800X', 'cpu', 'Amd', 'Procesador de alto rendimiento', 250, 'madrid', 'nuevo'),
+('Intel Core i7-12700K', 'cpu', 'Intel', 'Procesador de 12ª generación', 320, 'barcelona', 'nuevo'),
+('NVIDIA RTX 3060', 'Gpu', 'Nvidia', 'Tarjeta gráfica de 12GB', 350, 'valencia', 'casi nuevo'),
+('NVIDIA RTX 3080', 'Gpu', 'Nvidia', 'Tarjeta gráfica de alto rendimiento', 750, 'madrid', 'bueno'),
+('MSI B450 Tomahawk', 'Placa base', 'Msi', 'Placa base para Ryzen', 120, 'barcelona', 'nuevo'),
+('ASUS ROG Strix B550-F', 'Placa base', 'Asus', 'Placa base gaming', 180, 'valencia', 'casi nuevo'),
+('Corsair Vengeance 16GB', 'Ram', 'Corsair', 'Memoria Ram DDR4 3200MHz', 80, 'madrid', 'nuevo'),
+('G.Skill Trident Z 32GB', 'Ram', 'Gskill', 'Memoria Ram DDR4 3600MHz', 150, 'barcelona', 'bueno'),
+('NZXT H510', 'Torre', 'Nzxt', 'Caja ATX con diseño minimalista', 100, 'valencia', 'nuevo'),
+('Corsair 4000D', 'Torre', 'Corsair', 'Torre con buen flujo de aire', 110, 'madrid', 'casi nuevo'),
+('Corsair RM750x', 'Fuente de alimentacion', 'Corsair', 'Fuente de 750W 80+ Gold', 130, 'barcelona', 'nuevo'),
+('EVGA 650W 80+ Bronze', 'Fuente de alimentacion', 'Evga', 'Fuente eficiente y económica', 80, 'valencia', 'bueno');
 
 
 
