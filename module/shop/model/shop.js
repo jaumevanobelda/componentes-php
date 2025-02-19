@@ -92,8 +92,8 @@ function load_details_producto(id){
             "<p>" + data[1].precio + "€</p>"+
             "</div>"+
             "<div class='details_producto_tipo'>"+
-            "<i class='fa-solid fa-microchip'></i>"+
-            "<p>" + data[1].tipo + "</p>"+
+            // "<i class='fa-solid fa-microchip'></i>"+
+            "<p>" + data[1].ico_tipo  + data[1].tipo + "</p>"+
             "</div>"+
             "<div class='details_producto_marca'>"+
             "<p>" + data[1].marca + "</p>"+

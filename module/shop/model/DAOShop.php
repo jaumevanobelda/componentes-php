@@ -24,7 +24,7 @@
 			return $retrArray;
         }
         function select_one_producto($id){
-            $sql = "SELECT *,(select imagen from tipos_productos where productos.tipo = nombre ) as img_tipo
+            $sql = "SELECT *,(select ico from tipos_productos where productos.tipo = nombre ) as ico_tipo
             FROM productos
             where id_producto =" . $id;
             $conexion = connect::con();

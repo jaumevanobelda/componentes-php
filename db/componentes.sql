@@ -173,11 +173,11 @@ Alter Table especificaciones_productos
 
 INSERT INTO tipos_productos ( nombre, imagen,ico) VALUES
 ('cpu','view/img/tipos/cpu.png','<i class="fa-solid fa-microchip" style="color: #2e6cd6;"></i>'),
-('gpu','view/img/tipos/gpu.png'),
-('placa base','view/img/tipos/placa.png'),
-('ram','view/img/tipos/ram.png'),
-('torre','view/img/tipos/torre.png'),
-('fuente de alimentacion','view/img/tipos/psu.png');
+('gpu','view/img/tipos/gpu.png','<img class="ico" src="view/ico/tipos/gpu.png"> '),
+('placa base','view/img/tipos/placa.png','<img class="ico" src="view/ico/tipos/gpu.png"> '),
+('ram','view/img/tipos/ram.png','<img class="ico" src="view/ico/tipos/gpu.png"> '),
+('torre','view/img/tipos/torre.png','<img class="ico" src="view/ico/tipos/gpu.png"> '),
+('fuente de alimentacion','view/img/tipos/psu.png','<img class="ico" src="view/ico/tipos/gpu.png"> ');
 
 INSERT INTO marcas ( nombre, imagen) VALUES
 ('amd','view/img/marcas/amd.png'),
